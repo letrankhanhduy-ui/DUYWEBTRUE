@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUYWEB - 10A1</title>
+    <style>
+        :root {
+            --bg-main: #0f0f12;
+            --bg-card: rgba(26, 27, 35, 0.85);
+            --bg-input: rgba(42, 44, 56, 0.9);
+            --text-main: #e4e6eb;
+            --text-sub: #b0b3b8;
+            --border-color: rgba(255, 255, 255, 0.12);
+            --primary: #3b82f6;
+        }
+        body {
+            background: linear-gradient(135deg, #0f0c20 0%, #15102a 50%, #060411 100%);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0; padding: 20px;
+            min-height: 100vh;
+        }
+        .app-wrapper { max-width: 800px; margin: 0 auto; }
+        .card {
+            background: var(--bg-card); border-radius: 14px; padding: 18px;
+            margin-bottom: 20px; border: 1px solid var(--border-color);
+        }
+        .input-style, .textarea-style {
+            background: var(--bg-input); border: 1px solid var(--border-color);
+            color: white; padding: 10px; border-radius: 8px; width: 100%; margin-bottom: 10px;
+        }
+        .btn-primary {
+            background: var(--primary); color: white; border: none;
+            padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h1>🚀 DUYWEB (GitHub Edition)</h1>
+            <p style="color: var(--text-sub);">Cõi riêng của Hoàng Đế 10A1</p>
+        </div>
+
+        <!-- Khung đăng bài -->
+        <div class="card">
+            <h3>✍️ Đăng status xàm xí</h3>
+            <input type="text" id="postAuthor" placeholder="Tên hoặc biệt danh..." class="input-style">
+            <textarea id="postContent" placeholder="Hôm nay có gì vui không ní..." class="textarea-style"></textarea>
+            <button class="btn-primary" onclick="handleCreatePost()">Đăng lên luôn</button>
+        </div>
+
+        <!-- Nơi hiển thị danh sách bài viết -->
+        <div id="postsFeed">
+            <p style="text-align: center; color: var(--text-sub);">Đang tải dữ liệu từ thánh địa Firebase...</p>
+        </div>
+    </div>
+
+    <!-- Nhúng file logic JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
